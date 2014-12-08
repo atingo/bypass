@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="authentication">
+    <name>Authentication - Atingo Auth</name>
+    <author>Tomás Vilariño Fidalgo</author>
+    <creationDate>Outubro 2014</creationDate>
+    <copyright>Atingo Web</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>vifito@vifito.eu</authorEmail>
+    <authorUrl>http://atingo-dev.vifito.eu</authorUrl>
+
+    <version>0.1</version>
+
+    <description>Autologin Joomla</description>
+
+    <files>
+        <filename plugin="atingoauth">atingoauth.php</filename>
+        <filename>atingoauth.xml</filename>
+        <filename>index.html</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="username" type="text"
+                       default="admin"
+                       description="Username"
+                       label="Username"
+                       size="10"
+                        />
+
+                <field name="token" type="text"
+                       default=""
+                       description="Token authentication"
+                       label="Token"
+                       size="30"
+                        />
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>

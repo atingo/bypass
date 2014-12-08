@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AtingoPluginByPass" default="build:plugin" basedir="." description="">
+    <property file="build.properties"  />
+    
+    <fileset id="srcfiles" dir=".">
+        <include name="${plugin.name}.php" />        
+        <include name="${plugin.name}.xml" />
+        <include name="index.html" />
+    </fileset>
+    
+    <target name="build:plugin" description="Empaquetar plugin Joomla!">
+        <echo>Empaquetando plugin ${plugin.name} v. ${plugin.version}</echo>
+        
+        <mkdir dir="${target.directory}" />
+        <zip destfile="${target.directory}/${plugin.name}-${plugin.version}.zip">
+            <fileset refid="srcfiles" />
+        </zip>
+    </target>
+</project>

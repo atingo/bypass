@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system">
+    <name>Authentication - Atingo Bypass</name>
+    <author>Tomás Vilariño Fidalgo</author>
+    <creationDate>Outubro 2014</creationDate>
+    <copyright>Atingo Web</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>vifito@vifito.eu</authorEmail>
+    <authorUrl>http://atingo-dev.vifito.eu</authorUrl>
+
+    <version>0.1</version>
+
+    <description>Autologin Joomla</description>
+
+    <files>
+        <filename plugin="atingobypass">atingobypass.php</filename>
+        <filename>atingobypass.xml</filename>
+        <filename>index.html</filename>
+    </files>
+
+    <!--<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="username" type="text"
+                       default="admin"
+                       description="Username"
+                       label="Username"
+                       size="10"
+                        />
+            </fieldset>
+        </fields>
+    </config>-->
+
+</extension>

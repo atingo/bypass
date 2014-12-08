@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AtingoModuleAtingoBypass" default="build:module" basedir="." description="">
+    <property file="build.properties"  />
+
+    <fileset id="srcfiles" dir=".">
+        <include name="tmpl/**" />
+        <include name="js/**" />
+        <include name="css/**" />
+        <include name="fonts/**" />
+        <include name="fields/**" />
+        <include name="mod_${module.name}.xml" />
+        <include name="mod_${module.name}.php" />
+        <include name="helper.php" />
+        <include name="index.html" />
+    </fileset>
+
+    <target name="build:module" description="Generar modulo Joomla!">
+
+        <echo>${module.name}</echo>
+
+        <mkdir dir="${target.directory}" />
+        <zip destfile="${target.directory}/mod_${module.name}-${module.version}.zip">
+            <fileset refid="srcfiles" />
+        </zip>
+    </target>
+
+</project>
